@@ -10,7 +10,7 @@ public class AmazonMain {
 
 		boolean num = true;
 		while (num) {
-			System.out.println("Enter your input as ");
+			System.out.println("Enter your choice ");
 			int i = scanner.nextInt();
 			switch (i) {
 			case 1:
@@ -28,10 +28,15 @@ public class AmazonMain {
 			case 4:
 				Amazon.modify();
 				break;
-			case 5:
-				num = false;
+			default:
+				System.out.println("Please choice number form above");
+				int j = scanner.nextInt();
+				if (j > 0 && j < 4) {
+					i = j;
+				} else {
+					System.out.println("Exit");
+				}
 			}
 		}
 	}
-
 }
